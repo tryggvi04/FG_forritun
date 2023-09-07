@@ -1,0 +1,19 @@
+SELECT a.name
+FROM actors a, movies m, Actors_in_movies am
+WHERE am.actor_id = a.id and am.movie_id = m.id and m.Title = 'Lost in translation'
+
+SELECT d.name
+FROM directors d, movies m
+WHERE d.id = m.Director_id and m.Title like 'Raiders of the lost ark'
+
+SELECT a.name
+FROM actors a, movies m, Actors_in_movies am
+WHERE am.actor_id = a.id and am.movie_id = m.id and m.Title = 'Star wars: the phantom menace' and a.gender = 'female'
+
+SELECT m.Title
+FROM directors d, movies m
+WHERE d.id = m.Director_id and d.name like 'James Cameron'
+
+SELECT m.*
+FROM movies m
+WHERE m.Genre like 'horror' or m.Genre like 'drama'

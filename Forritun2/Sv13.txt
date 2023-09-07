@@ -1,0 +1,21 @@
+SELECT count(*)
+FROM Students s, Students_in_courses sc, Courses c
+WHERE s.ssn = sc.student_ssn AND sc.course_id = c.id AND c.name like "programming 101"
+
+SELECT count(*)
+FROM Teachers t
+
+SELECT count(*)
+FROM Courses c
+
+SELECT count(*)
+FROM Courses c
+WHERE c.department like "computer department"
+
+SELECT avg(sc.final_grade)
+FROM Courses c, Students_in_courses sc
+WHERE c.id = sc.course_id AND c.name like "law 101"
+
+SELECT avg(sc.final_grade)
+FROM Courses c, Students_in_courses sc
+WHERE c.id = sc.course_id AND c.name like "programming 101"

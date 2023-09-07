@@ -1,0 +1,23 @@
+SELECT a.title
+FROM Albums a, songs s
+WHERE a.id = s.album_id
+GROUP by a.id
+HAVING count(s.id) > 10
+
+SELECT m.name
+from musicians m, instruments i, musician_in_band mb
+WHERE m.id = mb.musician_id and i.id = mb.Instrument_id and i.name like "guitar" and m.age = (SELECT min(m.age) from musicians m, musician_in_band mb, instruments i WHERE i.id = mb.Instrument_id and m.id = mb.musician_id and i.name like "guitar")
+
+SELECT b.name
+from Bands b
+WHERE b.year_founded = (SELECT min(year_founded) FROM Bands)
+
+SELECT m.name
+from musicians m
+WHERE m.age = (SELECT max(age) FROM musicians)
+
+SELECT b.name, sum(s.duration)
+from Bands b, songs s
+WHERE b.id = s.band_id
+GROUP by b.id
+

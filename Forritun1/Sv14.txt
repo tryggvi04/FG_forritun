@@ -1,0 +1,28 @@
+SELECT m.Title
+FROM movies m, actors a, Actors_in_movies am
+WHERE a.id = am.actor_id AND am.movie_id = m.id AND a.name like "Harrison Ford"
+
+SELECT avg(m.length_in_minutes)
+FROM movies m, actors a, Actors_in_movies am
+WHERE a.id = am.actor_id AND am.movie_id = m.id AND a.name like "Harrison Ford"
+
+SELECT count(*)
+FROM movies m, actors a, Actors_in_movies am
+WHERE a.id = am.actor_id AND am.movie_id = m.id AND a.name like "Christian Bale"
+
+SELECT m.Title, m.length_in_minutes
+FROM movies m, actors a, Actors_in_movies am
+WHERE a.id = am.actor_id AND am.movie_id = m.id AND a.name like "Christian Bale"
+ORDER BY m.length_in_minutes ASC
+LIMIT 1
+
+SELECT avg(m.length_in_minutes)
+FROM movies m
+
+SELECT avg(m.length_in_minutes)
+FROM movies m
+WHERE m.Genre like "Horror"
+
+SELECT count(*)
+FROM movies m
+WHERE m.Genre like "Comedy"

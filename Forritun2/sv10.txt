@@ -1,0 +1,21 @@
+SELECT s.name
+FROM Students s, Courses c, Students_in_courses sc
+WHERE s.ssn = sc.student_ssn and c.id = sc.course_id and c.name = 'programming 101'
+
+SELECT s.name
+FROM Students s, Courses c, Students_in_courses sc
+WHERE s.ssn = sc.student_ssn and c.id = sc.course_id and c.name = 'programming 201' and sc.final_grade = 10
+
+SELECT s.name
+FROM Students s, Courses c, Students_in_courses sc
+WHERE s.ssn = sc.student_ssn and c.id = sc.course_id and sc.final_grade < 5
+
+SELECT s.name
+FROM Students s, Courses c, Students_in_courses sc
+WHERE s.ssn = sc.student_ssn and c.id = sc.course_id and sc.final_grade < 8 and s.department = 'business department'
+
+SELECT s.name
+FROM Students s, Courses c, Students_in_courses sc
+WHERE s.ssn = sc.student_ssn and c.id = sc.course_id and sc.final_grade > 8 and c.name = 'programming 101'
+
+

@@ -1,0 +1,21 @@
+SELECT t.name, t.age
+FROM Teachers t
+ORDER BY t.name
+
+SELECT t.name
+FROM Teachers t
+WHERE t.gender = 'male'
+ORDER BY t.name
+
+SELECT t.name
+FROM Teachers t
+WHERE t.gender = 'female'
+ORDER BY t.name
+
+SELECT t.name, t.age
+FROM Teachers t
+WHERE t.gender = 'female' AND t.age > 35
+
+SELECT i.student_ssn
+FROM Students_in_courses i
+WHERE i.final_grade < 5 AND i.course_id = 1

@@ -1,0 +1,22 @@
+SELECT m.name, m.age
+from musicians m
+GROUP by m.id
+
+SELECT m.name
+from musicians m, Bands b, musician_in_band mb
+WHERE m.id = mb.musician_id and mb.band_id = b.id and (b.name like "Muse" or b.name like "Metallica")
+GROUP by m.id
+
+SELECT a.title
+from Albums a
+WHERE a.genre like "Rock" or a.genre like "Metal"
+
+SELECT m.name, m.age, i.name
+from musicians m, musician_in_band mb, instruments i, Bands b
+WHERE m.id = mb.musician_id and mb.band_id = b.id and i.id = mb.Instrument_id and b.name like "The Pixies"
+GROUP by m.id
+
+SELECT m.name, m.age, b.name
+from musicians m, musician_in_band mb, Bands b
+WHERE m.id = mb.musician_id and mb.band_id = b.id and m.gender like "female"
+GROUP by m.id

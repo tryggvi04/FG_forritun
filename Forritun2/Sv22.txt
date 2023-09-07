@@ -1,0 +1,25 @@
+SELECT m.name
+FROM musicians m, musician_in_band mb, instruments i
+WHERE m.id = mb.musician_id and mb.Instrument_id = i.id
+GROUP by m.id
+HAVING count(i.id) > 1
+
+SELECT i.name, avg(m.age)
+from instruments i, musicians m, musician_in_band mb
+WHERE i.id = mb.Instrument_id and mb.musician_id = m.id
+GROUP by i.id
+
+SELECT i.name, count(m.id)
+from instruments i, musicians m, musician_in_band mb
+WHERE i.id = mb.Instrument_id and mb.musician_id = m.id
+GROUP by i.id
+
+SELECT a.genre, count(a.id)
+from Albums a
+GROUP by a.genre
+
+SELECT a.title
+from Albums a, songs s
+WHERE a.id = s.album_id and a.genre like "metal"
+group by a.title
+HAVING sum(s.duration) > 50

@@ -1,0 +1,37 @@
+CREATE TABLE Students (
+  ssn INTEGER PRIMARY KEY,
+  first_name TEXT NOT NULL,
+  middle_name TEXT,
+  last_name TEXT NOT NULL,
+  address TEXT NOT NULL,
+  program TEXT NOT NULL
+ );
+ 
+CREATE TABLE Courses (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  credits, INTEGER NOT NULL,
+  description, TEXT,
+  teacher_id INTEGER NOT NULL,
+  FOREIGN KEY (teacher_id) REFERENCES Teachers (id)
+);
+
+CREATE TABLE Teachers (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  ssn INTEGER NOT NULL,
+  name TEXT NOT NULL
+);
+
+CREATE TABLE Students_In_Course (
+student_ssn INTEGER,
+course_id INTEGER,
+
+PRIMARY KEY (student_ssn, course_id),
+FOREIGN KEY (student_ssn) REFERENCES Students (ssn),
+FOREIGN KEY (course_id) REFERENCES Courses (id)
+
+
+);
+
+
+

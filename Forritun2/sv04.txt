@@ -1,0 +1,27 @@
+SELECT c.name
+FROM Courses c
+WHERE c.department = 'computer department'
+
+SELECT c.name
+FROM Courses c
+WHERE c.credits = 6
+
+SELECT c.name
+FROM Courses c
+WHERE c.credits = 3
+
+SELECT s.name
+FROM Students s
+WHERE s.gender = 'male'
+
+SELECT s.name
+FROM Students s
+WHERE s.gender = 'female'
+
+SELECT t.name
+FROM Teachers t
+WHERE t.age > 35
+
+SELECT s.name
+FROM Students s
+ORDER BY s.name;

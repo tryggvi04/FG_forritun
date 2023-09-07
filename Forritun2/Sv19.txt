@@ -1,0 +1,20 @@
+SELECT b.name
+FROM Bands b
+ORDER BY b.name ASC
+
+SELECT b.name
+FROM Bands b
+WHERE b.name like "m%"
+
+SELECT a.title
+FROM Bands b, Albums a
+WHERE b.id = a.band_id and b.name like "Metallica"
+
+SELECT a.title
+FROM Bands b, Albums a
+WHERE b.id = a.band_id and b.name like "Iron Maiden"
+
+SELECT a.title
+FROM Albums a
+
+

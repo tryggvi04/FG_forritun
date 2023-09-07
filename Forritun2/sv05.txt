@@ -1,0 +1,24 @@
+SELECT c.name
+FROM Courses c
+ORDER BY c.name
+
+SELECT *
+FROM Courses c
+WHERE c.name like '%programming%'
+
+SELECT t.name
+FROM Teachers t
+WHERE t.name like 'A%'
+
+SELECT t.name
+FROM Teachers t
+ORDER BY t.age DESC
+LIMIT 1
+
+SELECT t.name
+FROM Teachers t
+WHERE t.age < 30 or t.age > 50
+
+SELECT c.name
+FROM Courses c
+WHERE c.name like 'programming%' AND c.credits > 6

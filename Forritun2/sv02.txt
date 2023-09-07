@@ -1,0 +1,52 @@
+INSERT INTO Students(ssn, first_name, middle_name, last_name, address, program)
+VALUES(0407042990, 'Tryggvi', NULL, 'Ólafsson', 'Hringbraut 35', 'Nátturufræðibraut'); 
+
+INSERT INTO Students(ssn, first_name, middle_name, last_name, address, program)
+VALUES(0498515481, 'Guðmundur', 'Njáll', 'Pétursson', 'Gormakór 3', 'Opinn braut'); 
+
+INSERT INTO Students(ssn, first_name, middle_name, last_name, address, program)
+VALUES(1708045482, 'Kristjón', 'Forni', 'Haraldson', 'Kársnessbraut 7', 'Viðskiptafræðibraut'); 
+
+INSERT INTO Students(ssn, first_name, middle_name, last_name, address, program)
+VALUES(5410045483, 'Kristján', 'Orri', 'Leifsson', 'Þorrasalir 20', 'Nátturufræðibraut'); 
+
+INSERT INTO Students(ssn, first_name, middle_name, last_name, address, program)
+VALUES(6518045840, 'Darth', NULL, 'Vader', 'Death Star', 'Sith Academy'); 
+
+INSERT INTO Students(ssn, first_name, middle_name, last_name, address, program)
+VALUES(6414065410, 'Luke', NULL, 'Skywalker', 'Millenium Falcon', 'Jedi Academy'); 
+
+INSERT INTO Students(ssn, first_name, middle_name, last_name, address, program)
+VALUES(0917054862, 'Frodo', NULL, 'Baggins', 'The Shire', 'Litetature'); 
+
+
+INSERT INTO Teachers(ssn, name)
+VALUES(5485452154, 'Leifur Guðmundsson');
+
+INSERT INTO Teachers(ssn, name)
+VALUES(5414535415, 'Pétur Arnarsson');
+
+INSERT INTO Teachers(ssn, name)
+VALUES(8764128741, 'Arnar Kristjánson');
+
+
+INSERT INTO Courses(name, credits, description, teacher_id)
+VALUES('Programming 101', 6, 'Learn the basics of Python', 1);
+
+INSERT INTO Courses(name, credits, description, teacher_id)
+VALUES('Programming 201', 6, 'Learn advanced python', 1);
+
+INSERT INTO Courses(name, credits, description, teacher_id)
+VALUES('Economics 101', 6, 'Learn the basics of econ', 2);
+
+INSERT INTO Courses(name, credits, description, teacher_id)
+VALUES('Math 101', 6, 'Learn differential and integrals', 3);
+
+INSERT INTO Courses(name, credits, description, teacher_id)
+VALUES('biology 101', 6, 'Learn botony and the anatomy of plants', 4);
+
+
+
+INSERT INTO Teachers(ssn, name)
+VALUES(6518745416, 'Kristján Helgasson');
+

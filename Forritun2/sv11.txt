@@ -1,0 +1,21 @@
+SELECT s.name
+FROM Students s, Courses c, Students_in_courses sc
+WHERE s.ssn = sc.student_ssn and sc.course_id = c.id and (c.name = 'programming 101' or c.name = 'business 201')
+
+SELECT s.name
+FROM Students s, Courses c, Students_in_courses sc
+WHERE s.ssn = sc.student_ssn and sc.course_id = c.id and (c.name = 'programming 101' or c.name = 'business 201') and s.gender = 'male'
+
+SELECT s.*
+FROM Students s, Courses c, Students_in_courses sc
+WHERE s.ssn = sc.student_ssn and sc.course_id = c.id and c.name = 'programming 101'
+ORDER BY sc.final_grade DESC
+LIMIT 1
+
+SELECT s.name
+FROM Students s, Courses c, Students_in_courses sc
+WHERE s.ssn = sc.student_ssn and sc.course_id = c.id and c.name = 'business 201' and s.gender = 'female'
+
+SELECT c.name
+FROM Courses c
+WHERE c.department = 'computer department'

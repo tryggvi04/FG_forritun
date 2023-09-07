@@ -1,0 +1,20 @@
+SELECT s.name
+FROM Students s;
+
+SELECT c.name
+FROM Courses c;
+
+select c.name, c.credits
+FROM Courses c
+
+SELECT t.name
+from Teachers t;
+
+SELECT c.name, c.teacher_id
+FROM Courses c;
+
+SELECT t.name, t.age
+FROM Teachers t;
+
+SELECT *
+FROM Students_in_courses;

@@ -1,0 +1,20 @@
+SELECT t.name
+FROM Teachers t
+ORDER BY t.age
+
+SELECT t.name
+FROM Teachers t
+WHERE t.gender = 'male' AND t.age > 42
+ORDER BY t.name DESC
+
+SELECT c.name, c.credits
+FROM Courses c
+WHERE c.credits = 8 AND (c.department = 'law department' OR c.department = 'business department')
+
+SELECT s.name
+FROM Students s
+WHERE ssn like '07%'
+
+SELECT s.name
+FROM Students s
+WHERE ssn like '07%' OR ssn like '05%'

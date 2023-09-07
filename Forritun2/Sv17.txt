@@ -1,0 +1,24 @@
+SELECT b.name
+FROM Bands b
+ORDER BY b.year_founded ASC
+LIMIT 1
+
+SELECT m.name
+FROM musicians m, musician_in_band mb, instruments i
+WHERE m.id = mb.musician_id and mb.Instrument_id = i.id and i.name like "drums"
+
+SELECT s.title
+FROM songs s
+WHERE s.duration > 6
+
+SELECT b.name
+FROM Bands b, songs s, Albums a
+WHERE b.id = s.band_id AND s.album_id = a.id
+GROUP BY a.id
+HAVING sum(s.duration) > 50
+
+SELECT b.name
+FROM Bands b, musicians m, musician_in_band mb
+WHERE b.id = mb.band_id and mb.musician_id = m.id
+GROUP BY b.id
+HAVING count(m.id) > 5

@@ -1,0 +1,24 @@
+SELECT d.name, count(m.Title)
+FROM directors d, movies m
+WHERE d.id = m.Director_id
+GROUP BY d.name
+
+SELECT a.name, count(m.Title)
+FROM actors a, movies m, Actors_in_movies am
+WHERE a.id = am.actor_id and am.movie_id = m.id
+GROUP BY a.name
+
+SELECT a.name, avg(m.length_in_minutes)
+FROM actors a, movies m, Actors_in_movies am
+WHERE a.id = am.actor_id and am.movie_id = m.id
+GROUP BY a.name
+
+SELECT m.Title, m.length_in_minutes, m.Genre
+FROM movies m
+WHERE m.length_in_minutes > 120
+GROUP BY m.Title
+
+SELECT m.Title, m.length_in_minutes, m.Genre
+FROM movies m
+WHERE m.length_in_minutes < 120 and m.Genre like "comedy"
+GROUP BY m.Title

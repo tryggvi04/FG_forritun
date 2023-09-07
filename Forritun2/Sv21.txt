@@ -1,0 +1,22 @@
+SELECT avg(m.age)
+FROM musicians m
+
+SELECT a.title, sum(s.duration)
+FROM Albums a, songs s
+WHERE a.id = s.album_id and a.genre like "punk"
+GROUP BY a.id
+
+
+SELECT b.name
+FROM Albums a, Bands b
+WHERE b.id = a.band_id
+GROUP BY b.id
+HAVING count(a.id) >= 2
+
+SELECT a.title
+FROM Bands b, Albums a
+WHERE b.id = a.band_id and b.name like "Iron Maiden"
+
+SELECT b.name
+from Bands b, musicians m, musician_in_band mb
+WHERE b.id = mb.band_id and m.id = mb.musician_id and m.gender like "female"

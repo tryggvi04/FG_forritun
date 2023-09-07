@@ -1,0 +1,24 @@
+SELECT b.name, avg(m.age)
+FROM Bands b, musicians m, musician_in_band mb
+WHERE b.id = mb.band_id and m.id = mb.musician_id
+GROUP BY b.id
+
+SELECT a.title
+FROM songs s, Albums a
+WHERE s.album_id = a.id
+GROUP BY a.id
+HAVING count(s.id) > 12
+
+SELECT b.name
+FROM Bands b, Albums a
+WHERE a.release_year like "2003" and a.band_id = b.id
+GROUP by b.id
+
+SELECT avg(m.age)
+FROM musicians m, musician_in_band mb, instruments i
+WHERE m.id = mb.musician_id and mb.Instrument_id = i.id and i.name like "drums"
+
+SELECT a.title, avg(s.duration)
+FROM Albums a, songs s
+WHERE a.id = s.album_id
+GROUP by a.id

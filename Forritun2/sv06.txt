@@ -1,0 +1,17 @@
+SELECT c.name
+FROM Courses c
+ORDER BY c.name DESC
+
+SELECT t.name
+FROM Teachers t
+WHERE t.gender = 'female'
+ORDER BY age 
+LIMIT 1
+
+SELECT c.name
+FROM Courses c
+WHERE c.department = 'law department' AND c.credits > 6
+
+SELECT s.*
+FROM Students s
+WHERE s.age > 30

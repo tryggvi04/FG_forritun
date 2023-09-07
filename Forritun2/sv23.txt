@@ -1,0 +1,23 @@
+SELECT title
+FROM songs
+WHERE duration = (SELECT MAX(duration) FROM songs)
+
+SELECT title
+FROM songs
+WHERE duration = (SELECT min(duration) FROM songs)
+
+SELECT b.name, count(s.id)
+from Bands b, songs s
+WHERE b.id = s.band_id
+GROUP by b.id
+HAVING count(s.id) > 15
+
+SELECT b.name, count(m.id)
+from musicians m, Bands b, musician_in_band mb
+WHERE m.id = mb.musician_id and b.id = mb.band_id
+GROUP by b.id
+
+SELECT a.title, count(s.id)
+from Albums a, songs s
+WHERE a.id = s.album_id
+GROUP by a.id
